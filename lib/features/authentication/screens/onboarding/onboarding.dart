@@ -1,12 +1,12 @@
 import 'package:eventtm/features/authentication/controllers/controllers_onboarding/onboarding_controller.dart';
+import 'package:eventtm/features/authentication/screens/onboarding/screens_onboarding/onboarding_navigation.dart';
+import 'package:eventtm/features/authentication/screens/onboarding/screens_onboarding/onboarding_next_button.dart';
+import 'package:eventtm/features/authentication/screens/onboarding/screens_onboarding/onboarding_page.dart';
+import 'package:eventtm/features/authentication/screens/onboarding/screens_onboarding/onboarding_skip.dart';
 import 'package:eventtm/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:eventtm/utils/constants/image_strings.dart';
-import '../../../features/screens_onboarding/onboarding_navigation.dart';
-import '../../../features/screens_onboarding/onboarding_next_button.dart';
-import '../../../features/screens_onboarding/onboarding_page.dart';
-import '../../../features/screens_onboarding/onboarding_skip.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

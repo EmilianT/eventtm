@@ -1,14 +1,14 @@
-import 'package:eventtm/pages/welcome/login/widgets/login_divider.dart';
-import 'package:eventtm/pages/welcome/login/widgets/login_footer.dart';
-import 'package:eventtm/pages/welcome/login/widgets/login_form.dart';
-import 'package:eventtm/pages/welcome/login/widgets/login_header.dart';
+import 'package:eventtm/features/authentication/screens/login/widgets/login_divider.dart';
+import 'package:eventtm/features/authentication/screens/login/widgets/login_footer.dart';
+import 'package:eventtm/features/authentication/screens/login/widgets/login_form.dart';
+import 'package:eventtm/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:eventtm/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../common/styles/spacing_styles.dart';
-import '../../../utils/constants/sizes.dart';
-import '../../../utils/helpers/helper_functions.dart';
+import '../../../../utils/helpers/helper_functions.dart';
+import 'package:eventtm/utils/constants/sizes.dart';
+import 'package:eventtm/common/styles/spacing_styles.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

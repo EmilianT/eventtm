@@ -1,9 +1,9 @@
 import 'package:eventtm/utils/styles/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/text_strings.dart';
 
 class EventTMLoginHeader extends StatelessWidget {
   const EventTMLoginHeader({

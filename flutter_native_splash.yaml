@@ -22,7 +22,7 @@ flutter_native_splash:
 
   # The image parameter allows you to specify an image used in the splash screen.  It must be a
   # png file and should be sized for 4x pixel density.
-  image: "lib/utils/assets/images/EventTMLogo.png"
+  image: "assets/images/logo/EventTMLogo1152.png"
 
   # The branding property allows you to specify an image used as branding in the splash screen.
   # It must be a png file. It is supported for Android, iOS and the Web.  For Android 12,
@@ -43,7 +43,7 @@ flutter_native_splash:
   # set.
   color_dark: "#313233"
   #background_image_dark: "assets/dark-background.png"
-  image_dark: "lib/utils/assets/images/EventTMLogo.png"
+  image_dark: "assets/images/logo/EventTMLogo1152_dark.png"
   #branding_dark: assets/dart_dark.png
 
   # From Android 12 onwards, the splash screen is handled differently than in previous versions.
@@ -57,7 +57,7 @@ flutter_native_splash:
     # 640 pixels in diameter.
     # App icon without an icon background: This should be 1152×1152 pixels, and fit within a circle
     # 768 pixels in diameter.
-    image: "lib/utils/assets/images/EventTMLogo.png"
+    image: "assets/images/logo/EventTMLogo1152.png"
 
     # Splash screen background color.
     color: "#fcfcfc"
@@ -71,7 +71,7 @@ flutter_native_splash:
     # The image_dark, color_dark, icon_background_color_dark, and branding_dark set values that
     # apply when the device is in dark mode. If they are not specified, the app will use the
     # parameters from above.
-    image_dark: "lib/utils/assets/images/EventTMLogo.png"
+    image_dark: "assets/images/logo/EventTMLogo1152_dark.png"
     color_dark: "#313233"
     icon_background_color_dark: "#313233"
 

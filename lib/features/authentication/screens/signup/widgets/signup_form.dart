@@ -1,11 +1,11 @@
-import 'package:eventtm/pages/welcome/signup/widgets/signup_tc.dart';
+import 'package:eventtm/features/authentication/screens/signup/widgets/signup_tc.dart';
 import 'package:eventtm/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
-import '../../../../utils/styles/colors.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/text_strings.dart';
+import '../../../../../utils/styles/colors.dart';
 
 class EventTMSignUpForm extends StatelessWidget {
   const EventTMSignUpForm({

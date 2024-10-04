@@ -1,10 +1,10 @@
-import 'package:eventtm/pages/welcome/signup/register.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/text_strings.dart';
+import '../../signup/register.dart';
 // import '../../../utils/helpers/helper_functions.dart';
 
 class EventTMLoginForm extends StatelessWidget {
