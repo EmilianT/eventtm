@@ -27,6 +27,7 @@ class EventTMAppTheme {
     elevatedButtonTheme: EventTMElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: EventTMOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: EventTMInputDecorationTheme.lightInputDecorationTheme,
+
   );
 
   static ThemeData darkTheme = ThemeData(

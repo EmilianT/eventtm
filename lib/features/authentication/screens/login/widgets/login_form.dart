@@ -1,3 +1,9 @@
+import 'package:eventtm/navigation_menu.dart';
+import 'package:eventtm/utils/helpers/helper_functions.dart';
+import 'package:eventtm/utils/styles/colors.dart';
+// import 'package:eventtm/utils/theme/widgets/checkbox_theme.dart';
+import 'package:eventtm/utils/theme/widgets/elevatedbutton_theme.dart';
+import 'package:eventtm/utils/theme/widgets/text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -5,7 +11,6 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
 import '../../signup/register.dart';
-// import '../../../utils/helpers/helper_functions.dart';
 
 class EventTMLoginForm extends StatelessWidget {
   const EventTMLoginForm({
@@ -14,67 +19,79 @@ class EventTMLoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final dark = EventTMHelpers.isDarkMode(context);
+    final dark = EventTMHelpers.isDarkMode(context);
+
+    final bodyMediumLight = EventTMTextTheme.lightTextTheme.bodyMedium;
+    final bodyMediumDark = EventTMTextTheme.darkTextTheme.bodyMedium;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(
-          vertical: EventTMSizes.spaceBtwSections),
+      padding:
+          const EdgeInsets.symmetric(vertical: EventTMSizes.spaceBtwSections),
       child: Form(
           child: Column(
+        children: [
+          //Email
+          TextFormField(
+            decoration: InputDecoration(
+              prefixIcon: const Icon(Iconsax.direct_right),
+              prefixIconColor: dark
+                  ? EventTMColors.darkColorScheme.secondary
+                  : EventTMColors.lightColorScheme.secondary,
+              labelText: EventTMTexts.email,
+            ),
+          ),
+          const SizedBox(height: EventTMSizes.spaceBtwInputFields),
+          TextFormField(
+            decoration: InputDecoration(
+                prefixIcon: const Icon(Iconsax.password_check),
+                prefixIconColor: dark
+                    ? EventTMColors.darkColorScheme.secondary
+                    : EventTMColors.lightColorScheme.secondary,
+                labelText: EventTMTexts.password,
+                suffixIcon: const Icon(Iconsax.eye_slash),
+                suffixIconColor: dark
+                    ? EventTMColors.darkColorScheme.secondary
+                    : EventTMColors.lightColorScheme.secondary),
+          ),
+          const SizedBox(height: EventTMSizes.spaceBtwInputFields / 2),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              //Email
-              TextFormField(
-                decoration: const InputDecoration(
-                  prefixIcon: Icon(Iconsax.direct_right),
-                  labelText: EventTMTexts.email,
-                ),
-              ),
+              //Remember Me
+              Checkbox(value: true, onChanged: (value) {}),
+              Text(EventTMTexts.rememberMe, style: dark ? bodyMediumDark : bodyMediumLight,),
+
               const SizedBox(
-                  height: EventTMSizes.spaceBtwInputFields),
-              TextFormField(
-                decoration: const InputDecoration(
-                    prefixIcon: Icon(Iconsax.password_check),
-                    labelText: EventTMTexts.password,
-                    suffixIcon: Icon(Iconsax.eye_slash)),
+                width: EventTMSizes.defaultSpace,
               ),
-              const SizedBox(
-                  height: EventTMSizes.spaceBtwInputFields / 2),
+              //Forget password
+              TextButton(
+                  onPressed: () {},
+                  child: const Text(EventTMTexts.forgotPassword)),
+            ],
+          ),
+          const SizedBox(height: EventTMSizes.spaceBtwSections),
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  //Remember Me
-                  Checkbox(value: true, onChanged: (value) {}),
-                  const Text(EventTMTexts.rememberMe),
+          SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => Get.to(() => const NavigationMenu()), style: dark ? EventTMElevatedButtonTheme.darkElevatedButtonTheme.style : EventTMElevatedButtonTheme.lightElevatedButtonTheme.style,
+                child:  const Text(EventTMTexts.signIn),
+              )),
 
-                  const SizedBox(
-                    width: EventTMSizes.defaultSpace,
-                  ),
-                  //Forget password
-                  TextButton(
-                      onPressed: () {},
-                      child:
-                      const Text(EventTMTexts.forgotPassword)),
-                ],
-              ),
-              const SizedBox(height: EventTMSizes.spaceBtwSections),
+          const SizedBox(height: EventTMSizes.spaceBtwInputFields),
 
-              SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: const Text(EventTMTexts.signIn),
+          SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  onPressed: () => Get.to(() => const SignUp()), style: dark ? EventTMElevatedButtonTheme.lightElevatedButtonTheme.style : EventTMElevatedButtonTheme.darkElevatedButtonTheme.style,
+                  child: const Text(EventTMTexts.createAccount),
                   )),
 
-              SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      onPressed: () => Get.to(() => const SignUp()),
-                      child:
-                      const Text(EventTMTexts.createAccount))),
-
-              const SizedBox(height: EventTMSizes.spaceBtwSections),
-            ],
-          )),
+          const SizedBox(height: EventTMSizes.spaceBtwSections),
+        ],
+      )),
     );
   }
 }

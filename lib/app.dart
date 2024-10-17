@@ -5,6 +5,10 @@ import 'package:eventtm/features/authentication/screens/onboarding/onboarding.da
 
 import 'package:get/get.dart';
 
+void main() {
+  runApp(const App());
+}
+
 class App extends StatelessWidget {
   const App({super.key});
 

@@ -6,9 +6,9 @@ import 'package:eventtm/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'package:eventtm/utils/styles/colors.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 import 'package:eventtm/utils/constants/sizes.dart';
-import 'package:eventtm/common/styles/spacing_styles.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -19,45 +19,29 @@ class LoginScreen extends StatelessWidget {
 
     return MaterialApp(
       home: Scaffold(
-        body: Stack(
-          children: <Widget>[
-            //Background image
-            Positioned.fill(child: Container(color: dark ? Colors.black.withOpacity(0.6) : Colors.transparent,),),
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: dark
-                        ? const AssetImage(
-                            "assets/images/login_images/FadedBackground.jpg")
-                        : const AssetImage(
-                            "assets/images/login_images/FadedBackground.jpg"),
-                    opacity: 0.4,
-                    fit: BoxFit.cover),
-              ),
+        body: Container(
+          decoration: BoxDecoration(color: dark ? EventTMColors.darkColorScheme.surface : EventTMColors.lightColorScheme.surface),
+          child: Padding(
+            padding: const EdgeInsets.only(top: EventTMSizes.appBarHeight, left: EventTMSizes.defaultSpace, right: EventTMSizes.defaultSpace, bottom: EventTMSizes.defaultSpace),
+            child: Column(
+              children: [
+                //Logo, Title & Subtitle
+                const EventTMLoginHeader(),
+
+                // Login Form
+                const EventTMLoginForm(),
+
+                // Divider
+                EventTMDivider(dividerText: EventTMTexts.orSignInWith.capitalize!,
+                    dark: dark),
+
+                const SizedBox(height: EventTMSizes.spaceBtwSections),
+
+                // Footer Auth
+                const EventTMSocialButtons(),
+              ],
             ),
-            SingleChildScrollView(
-              child: Padding(
-                padding: EventTMSpacingStyle.paddingWithAppBarHeight,
-                child: Column(
-                  children: [
-                    //Logo, Title & Subtitle
-                    EventTMLoginHeader(dark: dark),
-
-                    // Login Form
-                    const EventTMLoginForm(),
-
-                    // Divider
-                    EventTMDivider(dividerText: EventTMTexts.orSignInWith.capitalize! ,dark: dark),
-
-                    const SizedBox(height: EventTMSizes.spaceBtwSections),
-
-                    // Footer Auth
-                    const EventTMSocialButtons()
-                  ],
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

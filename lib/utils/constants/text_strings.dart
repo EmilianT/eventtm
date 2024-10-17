@@ -21,6 +21,7 @@ class EventTMTexts {
   static const String createAccount = "Create Account";
   static const String orSignInWith = "Or sign in with: ";
 
+  /// Sign up
   static const String signUpTitle = "Register new account";
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
@@ -38,10 +39,15 @@ class EventTMTexts {
   static const String accountCreatedTitle = "Account successfully created";
   static const String accountCreatedSubTitle = "Welcome to your new journey of discovering Timisoara the best and easiest way you can";
 
+  /// Forgot password
   static const String forgetPasswordTitle = "Forgot your password?";
   static const String forgetPasswordSubTitle = "Text for forgotten password plaky";
   static const String submit = "Submit";
   static const String resetPasswordTitle = "Password reset successfully";
   static const String resetPasswordSubTitle = "Text for password reset here = plaky";
   static const String done = "Done";
+
+  /// AppBarHome
+  static const String appBarTitle = "Welcome";
+  static const String appBarSubTitle = "Username";
 }

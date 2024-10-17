@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class EventTMColors {
+  EventTMColors._();
+
   static const lightColorScheme = ColorScheme(
     brightness: Brightness.light,
     primary: Color(0xFF36618E),
