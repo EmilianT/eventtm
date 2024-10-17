@@ -1,10 +1,9 @@
 import 'package:eventtm/common/styles/shadows.dart';
 import 'package:eventtm/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:eventtm/common/widgets/icon/eventtm_circular_icon.dart';
-import 'package:eventtm/common/widgets/images/eventtm_rounded_image.dart';
+import 'package:eventtm/common/widgets/images/eventtm_thumbnail_image.dart';
 import 'package:eventtm/common/widgets/texts/event_category_text.dart';
 import 'package:eventtm/utils/constants/enums.dart';
-import 'package:eventtm/utils/constants/image_strings.dart';
 import 'package:eventtm/utils/constants/sizes.dart';
 import 'package:eventtm/utils/helpers/helper_functions.dart';
 import 'package:eventtm/utils/styles/colors.dart';
@@ -13,7 +12,15 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:eventtm/common/widgets/texts/event_category_title_text.dart';
 
 class EventTMCardVertical extends StatelessWidget {
-  const EventTMCardVertical({super.key});
+  const EventTMCardVertical(
+      {super.key,
+      required this.showBorder,
+      this.onTap,
+      required this.imageUrl});
+
+  final bool showBorder;
+  final void Function()? onTap;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +53,9 @@ class EventTMCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   /// Thumbnail image
-                  const EventTMRoundedImage(
-                      imageUrl: EventTMImages.exitclub,
-                      // backgroundColor: dark
-                      //     ? EventTMColors.darkColorScheme.surfaceContainer
-                      //     : EventTMColors.lightColorScheme.surfaceContainer,
-                      applyImageRadius: true),
+                  EventTMThumbnailImage(
+                    imageUrl: imageUrl,
+                  ),
                   Positioned(
                       top: 0,
                       right: 0,

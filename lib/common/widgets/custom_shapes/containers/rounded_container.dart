@@ -9,8 +9,8 @@ class EventTMRoundedContainer extends StatelessWidget {
       this.radius = EventTMSizes.cardRadiusLg,
       this.child,
       this.showBorder = false,
-      required this.backgroundColor,
-      required this.borderColor,
+      this.backgroundColor = Colors.transparent,
+      this.borderColor = Colors.transparent,
       this.padding,
       this.margin});
 

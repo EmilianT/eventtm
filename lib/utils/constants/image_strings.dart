@@ -25,6 +25,7 @@ EventTMImages {
   static const String banner3 = "assets/images/banner/fratelli_banner.png";
 
   /// Clubs & Bars
-  static const String exitclub = "assets/images/clubs/exitclub.jpg";
+  static const String exitclub = "assets/images/banner/exitclub.jpg";
   static const String fratelli = "assets/images/banner/fratelli.png";
+  static const String epicsociety  = "assets/images/banner/epic_society.png";
 }

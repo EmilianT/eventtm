@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                   ),
 
                   /// Grid
-                  EventTMGridLayout(itemCount: 2, itemBuilder: (_ , index ) => const EventTMCardVertical(),)
+                  EventTMGridLayout(itemCount: 2, itemBuilder: (_ , index ) => EventTMCardVertical(imageUrl: EventTMImages.exitclub ,showBorder: true, onTap: (){},),)
                 ],
               ),
             ],
