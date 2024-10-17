@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/styles/colors.dart';
+import '../../../../../utils/styles/colors.dart';
 
 class EventTMDivider extends StatelessWidget {
   const EventTMDivider({

@@ -1,12 +1,12 @@
-import 'package:eventtm/pages/welcome/login/widgets/login_divider.dart';
-import 'package:eventtm/pages/welcome/login/widgets/login_footer.dart';
-import 'package:eventtm/pages/welcome/signup/widgets/signup_form.dart';
+import 'package:eventtm/features/authentication/screens/login/widgets/login_divider.dart';
+import 'package:eventtm/features/authentication/screens/login/widgets/login_footer.dart';
+import 'package:eventtm/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:eventtm/utils/constants/sizes.dart';
 import 'package:eventtm/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../utils/helpers/helper_functions.dart';
+import '../../../../utils/helpers/helper_functions.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
