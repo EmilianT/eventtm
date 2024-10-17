@@ -1,4 +1,5 @@
 import 'package:eventtm/features/events/screens/explore/explore.dart';
+import 'package:eventtm/features/events/screens/favorites/favorites.dart';
 import 'package:eventtm/features/events/screens/home/home.dart';
 import 'package:eventtm/utils/helpers/helper_functions.dart';
 import 'package:eventtm/utils/styles/colors.dart';
@@ -47,7 +48,7 @@ class NavigationController {
   final screens = [
     HomeScreen(),
     const Explore(),
-    Container(color: Colors.red),
+    const Favorites(),
     Container(color: Colors.blue)
   ];
 }
