@@ -1,6 +1,7 @@
 import 'package:eventtm/features/events/screens/explore/explore.dart';
 import 'package:eventtm/features/events/screens/favorites/favorites.dart';
 import 'package:eventtm/features/events/screens/home/home.dart';
+import 'package:eventtm/features/personalization/screens/settings/settings.dart';
 import 'package:eventtm/utils/helpers/helper_functions.dart';
 import 'package:eventtm/utils/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -49,6 +50,6 @@ class NavigationController {
     HomeScreen(),
     const Explore(),
     const Favorites(),
-    Container(color: Colors.blue)
+    const SettingsScreen(),
   ];
 }

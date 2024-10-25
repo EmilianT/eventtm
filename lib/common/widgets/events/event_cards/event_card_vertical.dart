@@ -27,7 +27,7 @@ class EventTMCardVertical extends StatelessWidget {
     final dark = EventTMHelpers.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
