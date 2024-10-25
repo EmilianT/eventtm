@@ -144,7 +144,7 @@ class Explore extends StatelessWidget {
                         Tab(child: Text('Thursday')),
                         Tab(child: Text('Friday')),
                         Tab(child: Text('Saturday')),
-                        Tab(child: Text('Tuesday')),
+                        Tab(child: Text('Sunday')),
                       ]))
                 ];
               },

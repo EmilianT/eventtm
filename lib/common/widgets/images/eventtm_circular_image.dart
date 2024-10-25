@@ -14,9 +14,10 @@ class EventTMCircularImage extends StatelessWidget {
     this.width = 56,
     this.height = 56,
     this.padding = EventTMSizes.sm,
+    this.transparent = false,
   });
 
-  final bool dark;
+  final bool dark, transparent;
   final BoxFit? fit;
   final String image;
   final bool isNetworkImage;
@@ -30,18 +31,14 @@ class EventTMCircularImage extends StatelessWidget {
       height: height,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
-          color: dark
-              ? EventTMColors.darkColorScheme.surface
-              : EventTMColors.lightColorScheme.surface,
+          color: backgroundColor ?? (dark ? EventTMColors.darkColorScheme.surface : EventTMColors.lightColorScheme.surface),
           borderRadius: BorderRadius.circular(100)),
       child: Image(
         image: isNetworkImage
             ? NetworkImage(image)
             : AssetImage(image) as ImageProvider,
         fit: fit,
-        color: dark
-            ? EventTMColors.lightColorScheme.surface
-            : EventTMColors.darkColorScheme.surface,
+        color: overlayColor,
       ),
     );
   }

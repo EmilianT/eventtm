@@ -22,7 +22,10 @@ class Favorites extends StatelessWidget {
           padding: const EdgeInsets.all(EventTMSizes.defaultSpace),
           child: Column(
             children: [
-              EventTMGridLayout(itemCount: 4, itemBuilder: (_, index) => const EventTMCardVertical(showBorder: true, imageUrl: EventTMImages.exitclub))
+              EventTMGridLayout(
+                  itemCount: 4,
+                  itemBuilder: (_, index) => const EventTMCardVertical(
+                      showBorder: true, imageUrl: EventTMImages.exitclub))
             ],
           ),
         ),

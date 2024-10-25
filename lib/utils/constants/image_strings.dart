@@ -28,4 +28,7 @@ EventTMImages {
   static const String exitclub = "assets/images/banner/exitclub.jpg";
   static const String fratelli = "assets/images/banner/fratelli.png";
   static const String epicsociety  = "assets/images/banner/epic_society.png";
+
+  /// User
+  static const String profilePicture = "assets/images/user/profilepicture.png";
 }

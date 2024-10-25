@@ -22,20 +22,17 @@ class EventTMPrimaryContainer extends StatelessWidget {
             ? EventTMColors.lightColorScheme.primary
             : EventTMColors.darkColorScheme.primary,
         padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
-          child: Stack(children: [
-            Positioned(
-                top: -150,
-                right: -150,
-                child: EventTMCircularContainer(dark: dark)),
-            Positioned(
-                top: 100,
-                left: -50,
-                child: EventTMCircularContainer(dark: dark)),
-            child,
-          ]),
-        ),
+        child: Stack(children: [
+          Positioned(
+              top: -150,
+              right: -150,
+              child: EventTMCircularContainer(dark: dark)),
+          Positioned(
+              top: 100,
+              left: -50,
+              child: EventTMCircularContainer(dark: dark)),
+          child,
+        ]),
       ),
     );
   }
